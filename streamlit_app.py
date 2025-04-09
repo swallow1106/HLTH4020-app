@@ -28,9 +28,9 @@ if uploaded_file:
 
     # --- Step 1: Convert a Numeric Column into Y/N ---
     st.subheader("🧮 Convert to Binary for Odds Ratio Analysis")
-
-    binary_column = st.selectbox("Select Column to Convert to Yes/No", df.columns)
-    cutoff = st.number_input("Enter Cutoff Value", min_value=float(df[binary_column].min()),
+    st.text("Select which column of the data to be converted to Binary Yes/No, Cutt-off Value will be picked next, this is usually the 'Recommand' column")
+    binary_column = st.selectbox("Select What to Convert to Yes/No - Satisfaction", df.columns)
+    cutoff = st.number_input("Enter Cutoff Value, this is > , so if 70 is entered 70", min_value=float(df[binary_column].min()),
                              max_value=float(df[binary_column].max()), value=float(df[binary_column].mean()))
 
     # Copy dataset before transformation
