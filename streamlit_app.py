@@ -31,7 +31,7 @@ if uploaded_file:
     st.text("Select which column of the data to be converted to Binary Yes/No, Cutt-off Value will be picked next, this is usually the 'Recommand' column")
     binary_column = st.selectbox("Select What to Convert to Yes/No - Satisfaction", df.columns)
     cutoff = st.number_input("Enter Cutoff Value, this is > , so if 70 is entered 70", min_value=float(df[binary_column].min()),
-                             max_value=float(df[binary_column].max()), value=float(df[binary_column].mean()))
+                             max_value=float(df[binary_column].max()), value=float(df[binary_column].mean()), index=2)
 
     # Copy dataset before transformation
     df_transformed = df.copy()
