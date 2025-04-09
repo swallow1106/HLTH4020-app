@@ -106,7 +106,7 @@ if uploaded_file:
     # --- Step 3: Linear Regression Analysis (Optional) ---
     st.subheader("📉 Linear Regression Analysis")
 
-    Y_column = st.selectbox("Select Dependent Variable for Regression", df_transformed.columns)
+    Y_column = st.selectbox("Select Dependent Variable for Regression", df_transformed.columns, index=11)
 
     if X_columns and Y_column:
         X = df_transformed[X_columns]
