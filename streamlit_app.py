@@ -13,7 +13,8 @@ from sklearn.metrics import classification_report
 import statsmodels.formula.api as smf
 
 # Streamlit App Title
-st.title("📊 HLTH 4020 Python Analysis using Panda/Numpy/MatPlot/StatsModels")
+st.title("HLTH 4020 Data Analysis")
+st.text("This is specifically created for Odds Ratio Analysis for HLTH 4020 - Davison Chen")
 
 # Upload CSV File
 uploaded_file = st.file_uploader("CSV file", type=["csv"])
